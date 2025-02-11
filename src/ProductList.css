@@ -50,11 +50,11 @@ body {
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
     text-decoration: none;
     /* background-color: pink; */
     /* justify-content: space-between; */
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -62,16 +62,15 @@ body {
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
-    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    flex: 0 0 calc(23% - 20px); /* Adjust width for 4 cards per row with 20px gap */
+    max-width: calc(15% - 20px); /* Adjust max-width for 4 cards per row with 20px gap */
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px; 
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
     position: relative;
-    
     gap: 20px;
 }
 
@@ -88,14 +87,14 @@ body {
 }
 
 .product-price {
-    color: #e74c3c;
+    color: #000000;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
 .product-image {
-    max-width: 100%;
-    height: 200px; /* Adjust height for better consistency */
+    max-width:200px;
+    height: 180px; /* Adjust height for better consistency */
 }
 
 .product-button {
@@ -115,7 +114,7 @@ body {
 /* Pseudo-elements - Sale badge */
 .product-card::before {
     content: "SALE";
-    background-color: #e74c3c;
+    background-color: #ed6050;
     color: #fff;
     position: absolute;
     top: 0;
@@ -125,7 +124,6 @@ body {
 }
 .tag_home_link{
     display: flex;
-    /* background-color: red; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -135,10 +133,10 @@ body {
     font-size: 20px;
 }
 .tag_home_link h3{
-    font-size: 30px;
+    font-size: 28px;
 }
 .tag a{
-    text-decoration: none;
+    text-decoration: underline;
 }
 .tag {
     width: 400px;
@@ -165,29 +163,36 @@ body {
     color: white;
     display: flex;
 }
-.cart_quantity_count{
-    margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 27px;
+.cart-icon{
+    position: relative;
+    display: inline-block;
+}
+.cart-count{
     position: absolute;
-    font-size: 29px;
+    top: 20px;
+    right: 12px;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
 
 }
 .plantname_heading{
    display: flex;
    align-items: center;
    justify-content: center;
-    /* background-color: yellow; */
 }
 .plant_heading{
     width: 400px;
     text-align: center;
     margin: 20px;
-    border: 1px solid rgb(5, 4, 4);
-    border-left: none;
-    border-right: none;
-
-    
+    padding : 20px;
+    border: 1px solid rgb(5, 4, 4); 
 }
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
@@ -216,7 +221,7 @@ body {
     background-color: #45a049;
   }
   
-  .product-button.added-to-cart {
+  .product-button.added {
     background-color: grey; /* Grey when product is added */
   }
   @media (max-width: 1200px) {

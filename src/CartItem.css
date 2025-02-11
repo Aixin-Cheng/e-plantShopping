@@ -1,19 +1,15 @@
 /* CartItem.css */
-/* CartItem.css */
 
 .cart-item {
   display: flex;
   border-bottom: 1px solid #ccc;
-  padding: 10px 0;
   background-color: white;
   width: 500px;
-  gap: 30px;
 }
 
 .cart-item-image {
   width: 200px;
   height: 200px;
-  /* object-fit: contain; */
   margin-right: 20px;
 }
 
@@ -60,18 +56,18 @@
 }
 
 .cart-item-delete {
-  background-color: #ff6961;
+  background-color: #ff5249;
   border: none;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 8px 12px;
   margin-top: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .cart-item-delete:hover {
-  background-color: #cc0000;
+  background-color: #b00000;
 }
 /* .cart-item-button-dec{
   background-color: red;

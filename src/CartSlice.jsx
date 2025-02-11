@@ -1,12 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+  items: [],
+};
 export const CartSlice = createSlice({
   name: 'cart',
-  initialState: {
-    items: [], // Initialize items as an empty array
-  },
+  initialState,
   reducers: {
     addItem: (state, action) => {
+      console.log("Redux: Adding item", action.payload); // Debugging log
       const { name, image, cost } = action.payload;
       const existingItem = state.items.find(item => item.name === name);
       if (existingItem) {
@@ -16,7 +18,7 @@ export const CartSlice = createSlice({
       }
     },
     removeItem: (state, action) => {
-      state.cartItems = state.cartItems.filter(item => item.name !== action.payload);
+      state.items = state.items.filter(item => item.name !== action.payload);
     },
     updateQuantity: (state, action) => {
       const { name, quantity } = action.payload;
